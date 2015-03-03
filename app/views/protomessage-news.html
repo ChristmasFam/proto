@@ -1,0 +1,22 @@
+<div class="news-message">
+  <div class="trigger">
+    <span class="news-icon"></span>
+    <span class="trigger-message">{{protomessage.triggerMessage}}</span>
+  </div>
+  <div class="notifications">
+    <div class="notification" ng-repeat="notification in protomessage.notifications">
+      <span class="person-icon"></span>
+      <span class="notification-message">{{notification.message}}</span>
+    </div>
+  </div>
+  <div class="actionList">
+    <div class="actionItem" ng-repeat="actionItem in protomessage.actionList">
+      <span ng-if="actionItem.type === 'slack'" class="slack-icon"></span>
+      <a ng-if="actionItem.url" href="{{actionItem.url}}">{{actionItem.message}}</a>
+      <span ng-if="!actionItem.url" class="action-message">{{actionItem.message}}</span>
+      <div class="actionOptions">
+        <span ng-repeat="option in actionItem.options" class="btn">{{option}}</span>
+      </div>
+    </div>
+  </div>
+</div>

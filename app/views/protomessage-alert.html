@@ -1,0 +1,22 @@
+<div class="alert-message">
+  <div class="trigger">
+    <span class="alert-icon"></span>
+    <span class="trigger-message">{{protomessage.triggerMessage}}</span>
+    <a class="trigger-detail-link" href="#/messages/{{protomessage.id}}">{{protomessage.triggerDetailLinkText}}</a>
+  </div>
+  <div class="notifications">
+    <div class="notification" ng-repeat="notification in protomessage.notifications">
+      <span class="person-icon"></span>
+      <span class="notification-message" ng-if="notification.type === 'viewed'">{{notification.person}} has also seen this message ({{notification.timestamp}})</span>
+    </div>
+  </div>
+  <div class="actionList">
+    <div class="actionItem" ng-repeat="actionItem in protomessage.actionList">
+      <span ng-if="actionItem.type === 'schedule'" class="schedule-icon"></span>
+      <span class="action-message">{{actionItem.message}}</span>
+      <div class="actionOptions">
+        <span ng-repeat="option in actionItem.options" class="btn">{{option}}</span>
+      </div>
+    </div>
+  </div>
+</div>
