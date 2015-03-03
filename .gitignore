@@ -17,3 +17,13 @@
 .idea/vcs.xml
 
 .idea/workspace.xml
+
+npm-debug.log
+
+bower_components/*
+
+node_modules/*
+
+.sass-cache/*
+
+.tmp/*
