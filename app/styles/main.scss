@@ -47,7 +47,7 @@ body {
   margin: 30px 0;
 }
 
-/* Main marketing message and sign up button */
+/* Main marketing message and sign up button (default content) */
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
@@ -58,12 +58,69 @@ body {
   }
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
+/* Message list */
+.proto-list {
+  background-image: url("../images/v-grey-line.png");
+  background-repeat: repeat-y;
+  background-position-x: 8px;
+  ul {
+    list-style-type: none;
+    padding-left: 10px;
+  }
+  .proto-message {
+    border-bottom: dashed 1px #b6b6b6;
+    padding-left: 28px;
+    vertical-align: middle;
 
-  p + h4 {
-    margin-top: 28px;
+    .message-item {
+      min-height: 45px;
+      vertical-align: middle;
+      padding: 10px 0;
+    }
+
+    .sub-item {
+      background-image: url("../images/v-grey-line.png");
+      background-repeat: repeat-y;
+      background-position-x: 1px;
+      padding-left: 20px;
+    }
+
+    .trigger {
+      position: relative;
+      left: -18px;
+      background-color: #ffffff;
+    }
+
+    .feed-icon {
+      width: 45px;
+      height: 45px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 15px;
+      background-size: 45px;
+    }
+    .news-icon {
+      background-image: url("../images/quotes.png");
+    }
+    .alert-icon {
+      background-image: url("../images/exclamation.png");
+    }
+    .person-icon {
+      background-image: url("../images/person.png");
+    }
+    .slack-icon {
+      background-image: url("../images/slack.png");
+    }
+    .schedule-icon {
+      background-image: url("../images/calendar.png");
+    }
+    .actionOptions {
+      margin-left: 65px;
+      .btn {
+        background-color: #5cb85c;
+        margin-right: 5px;
+      }
+    }
   }
 }
 
